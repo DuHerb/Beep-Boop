@@ -8,3 +8,8 @@ button {
   background-color: lightgrey;
   color: red;
 }
+
+
+@-ms-viewport{
+  width: device-width;
+}

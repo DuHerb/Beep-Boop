@@ -23,7 +23,7 @@ and "I'm sorry, Dave.  I'm afriad", I'm afraid I can't do that".
 
 |                                       Behavior                                       |    Input   |                 Expected Output                |
 |:------------------------------------------------------------------------------------:|:----------:|:----------------------------------------------:|
-| return a range of numbers from 0, to users input                                     | 5          | 0,1,2,3,4,5                                    |
+| return a range of numbers from 0 to users input                                     | 5          | 0,1,2,3,4,5                                    |
 | replace numbers that contain a 1 with "beep"                                         | 1, ... 11, | "beep",..."beep",                              |
 | replace numbers that contain a 2 with "boop"                                         | 2, ... 42, | "boop",..."boop",                              |
 | replace numbers that contain a 3 with "I'm sorry, Dave. I'm afraid I can't do that." | 103        | "I'm sorry, Dave. I'm afraid I can't do that." |

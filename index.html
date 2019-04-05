@@ -4,16 +4,26 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Beep-Boop Sorry, Dave...</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
     <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
   </head>
   <body>
-    <input type="number" name="" value="30" placeholder="How long is this array, Dave?">
+    <input type="number" name="" value="10" placeholder="How long is this array, Dave?">
     <button type="button" name="button">Return</button>
     <div class="output-box">
-      <output name="result"></output>
-      <p id="output"></p>
+      <!-- <output class="typewriter" name="result">
+        <p id="output"></p>
+      </output> -->
+    </div>
+
+    <div class="contianer py-5">
+      <div class="output" id="output">
+        <h1 class="cursor"></h1>
+        <p></p>
+      </div>
     </div>
   </body>
 </html>

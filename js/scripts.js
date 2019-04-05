@@ -13,6 +13,9 @@ $(document).ready(function(){
     // console.log(typeArray);
     typeWriter("output", typeArray);
   })
+  $('#reset').click(function(){
+    window.location.reload();
+  })
 
 
 //buildArray() takes a userInput and builds an array of that length
@@ -56,10 +59,6 @@ var speedForward = 50, //Typing Speed
 
 
 function typeWriter(id, ar) {
-  // var i = 0,
-  //     a = 0,
-  //     isBackspacing = false,
-  //     isParagraph = false;
   var element = $("#" + id),
       aString = ar[a],
       eHeader = element.children("h1"), //Header element
@@ -94,8 +93,8 @@ function typeWriter(id, ar) {
     // If full string has been typed, switch to backspace mode.
     } else if (i == aString.length) {
 
-      // isBackspacing = false;
-      // setTimeout(function(){ typeWriter(id, ar); }, speedWait);
+      i=0;
+      a=0;
       return;
     }
 

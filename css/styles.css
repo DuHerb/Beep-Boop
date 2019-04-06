@@ -45,9 +45,10 @@ body {
   border: 2px solid #808081;
   border-radius: 30px;
   padding: 20px;
-  background-color: #f8f1eb;
+  background-color: #e0e0df;
   color: #808081;
   text-align:center;
+  box-shadow: 0px 5px 4px inset;
 }
 
 .inputSubmit {
@@ -56,8 +57,9 @@ body {
   margin: 10px auto 0;
   border-radius: 30px;
   color: #808081;
+  border: 2px solid gray;
   background-color: #f98f39;
-  box-shadow: 0 8px 16px -3px black;
+  box-shadow: 0px 4px 1px 0px #927c7c;
 }
 
 .img-glow {

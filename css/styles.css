@@ -124,6 +124,10 @@ p.cursor::after {
     /* background-color: black; */
   }
 
+  .splash-box {
+    width: 100%;
+  }
+
   #hal {
     width: 100px;
     margin: 10px auto 0;

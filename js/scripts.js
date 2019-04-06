@@ -2,13 +2,27 @@ $(document).ready(function(){
   $('button').click(function(){
     var userInput = $('input').val();
     $('h1').empty();
-    var originArray = buildArray(userInput);
-    var outputArray = [originArray.join("")];
-
-    typeWriter("output", outputArray);
+    if (isValid(userInput)) {
+      var originArray = buildArray(userInput);
+      typeWriter("output", originArray);
+    } else {
+      var errorArray = ["input must be a number greater than 0"];
+      typeWriter("output", errorArray);
+    }
     $('input').val('');
   })
 })
+
+//validate(input) checks that the user has inputed a positive numbers
+function isValid(userInput) {
+  if (parseInt(userInput) && parseInt(userInput) > 0){
+    return true;
+  } else {
+    // var errorArray = ["input must be a number greater than 0"];
+    // typewriter('output', errorArray);
+    return false;
+  }
+}
 
 //buildArray() takes a userInput and builds an array of that length
 //It also substitues certain number strings for test strings
@@ -29,7 +43,7 @@ function buildArray(number) {
       originArray.push(" " + q + " ");
     }
   }
-  return originArray;
+  return [originArray.join('')];
 }
 
 //typewriter effects

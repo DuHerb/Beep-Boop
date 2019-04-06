@@ -19,6 +19,10 @@ and "I'm sorry, Dave.  I'm afriad", I'm afraid I can't do that".
 2.  Open the hatch, Hal.
 3.  I mean open in a browser, Hal.
 
+## Gihub Pages link
+
+<a href="https://duherb.github.io/Beep-Boop/">Beep-Boop Sorry, Dave...</a>
+
 ## Specifications
 
 |                                       Behavior                                       |    Input   |                 Expected Output                |
@@ -37,6 +41,9 @@ Contact Dustin Herboldshimer at dustnpdx@gmail.com
 ## Technologies Used
 
 #### Jquery v3.3.1
+
+#### David Carr's Pens - Multiline Typewriter Effect
+Thanks to David for the original code pen.  I adapted his code to work with my project.
 
 ### License
 

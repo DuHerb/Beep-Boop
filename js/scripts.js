@@ -1,7 +1,9 @@
 $(document).ready(function(){
   $('button').click(function(){
     var userInput = $('input').val();
-    $('h1').empty();
+
+    $('p').empty();
+
     if (isValid(userInput)) {
       var originArray = buildArray(userInput);
       typeWriter("output", originArray);
@@ -9,6 +11,7 @@ $(document).ready(function(){
       var errorArray = ["input must be a number greater than 0"];
       typeWriter("output", errorArray);
     }
+
     $('input').val('');
   })
 })
@@ -18,8 +21,6 @@ function isValid(userInput) {
   if (parseInt(userInput) && parseInt(userInput) > 0){
     return true;
   } else {
-    // var errorArray = ["input must be a number greater than 0"];
-    // typewriter('output', errorArray);
     return false;
   }
 }
@@ -61,8 +62,8 @@ var speedForward = 50, //Typing Speed
 function typeWriter(id, ar) {
   var element = $("#" + id),
       aString = ar[a],
-      eHeader = element.children("h1"), //Header element
-      eParagraph = element.children("p"); //Subheader element
+      eHeader = element.children("p"); //Header element
+      // eParagraph = element.children("p");
 
   if (i < aString.length) {
       eHeader.text(eHeader.text() + aString.charAt(i));

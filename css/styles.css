@@ -1,7 +1,19 @@
+:root {
+  --main-font-family: "Major Mono Display", monospace;
+  /* --main-font-family: "Libre Barcode 39", monospace; */
+  /* --main-font-family: "VT323", monospace; */
+  /* --main-font-family: "Space Mono", monospace; */
+}
+
+:root {
+  --glow-color: red;
+}
+
 body {
   background: #333;
   background-color: #f8f1eb;
-  font-family: "VT323", monospace;
+  font-family: var(--main-font-family);
+
 }
 
 .splash-box {
@@ -29,7 +41,7 @@ body {
   margin: -8% auto 0;
   width: 150px;
   height: 70px;
-  font-size: 2em;
+  font-size: 1.5em;
   border: 2px solid #808081;
   border-radius: 30px;
   padding: 20px;
@@ -40,7 +52,7 @@ body {
 
 .inputSubmit {
   width: 150px;
-  font-size: 1.5em;
+  font-size: 1em;
   margin: 10px auto 0;
   border-radius: 30px;
   color: #808081;
@@ -48,21 +60,34 @@ body {
   box-shadow: 0 8px 16px -3px black;
 }
 
+.img-glow {
+  animation: glowing 3000ms infinite alternate;
+}
+
 #hal {
   width: 100px;
   margin: 30px auto 0;
   z-index: 100;
+
+  top: calc(50% - 20px);
+  left: calc(50% - 20px);
+  /* width: 40px;
+  height: 40px; */
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow:
+    0 0 80px 20px var(--glow-color);
 }
 
 .output {
   text-align:left;
-  font-family: 'VT323', monospace;
+  font-family: var(--main-font-family);
   color:white;
   margin-bottom: 30px;
 }
 
 .cursor {
-  font-size: 30px;
+  font-size: 1em;
   color: orange;
   padding: 30px;
   border-radius: 30px;
@@ -71,8 +96,8 @@ body {
   background-color: black;
   }
 
-.output h1{
-  font-size: 30px;
+.output p{
+  font-size: 1em;
   color: orange;
   padding: 60px 20px 20px;
   min-height: : 300px;
@@ -117,6 +142,13 @@ p.cursor::after {
   100% {
     opacity: 0;
   }
+}
+
+@keyframes glowing {
+  0% { box-shadow: 0 0 -10px var(--glow-color);
+  40% {box-shadow: 0 0 20px var(--glow-color);}
+  60% { box-shadow: 0 0 20px var(--glow-color); }
+  100% { box-shadow: 0 0 -10px var(--glow-color); }
 }
 
 @media only screen and (max-width: 480px) {

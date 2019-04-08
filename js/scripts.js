@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  intro();
+  setTimeout(function(){intro();}, 1000);
   $('button').click(function(){
     var userInput = $('input').val();
 

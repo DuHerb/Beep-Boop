@@ -1,7 +1,5 @@
 :root {
-  /* --main-font-family: "Major Mono Display", monospace; */
   /* --main-font-family: "Libre Barcode 39", monospace; */
-  /* --main-font-family: "VT323", monospace; */
   --main-font-family: "Space Mono", monospace;
 }
 
@@ -15,8 +13,7 @@ body {
   font-family: var(--main-font-family);
   background-image: url("../img/metalPlate.jpg");
   background-size: cover;
-  background-position: fixed;
-
+  background-attachment: fixed;
 }
 
 h2 {
@@ -117,7 +114,9 @@ h2 {
   font-size: 1em;
   color: orange;
   padding: 65px 20px 20px;
-  height: : 300px;
+  height: 300px;
+  scroll-behavior: auto;
+  overflow: auto;
 }
 
 .engraved {
@@ -167,13 +166,14 @@ p.cursor::after {
 }
 
 @keyframes glowing {
-  0% { box-shadow: 0 0 -10px var(--glow-color);
+  0% { box-shadow: 0 0 -10px var(--glow-color);}
   40% {box-shadow: 0 0 20px var(--glow-color);}
   60% { box-shadow: 0 0 20px var(--glow-color); }
   100% { box-shadow: 0 0 -10px var(--glow-color); }
+
 }
 
-@media only screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
   body {
     /* background-color: black; */
   }

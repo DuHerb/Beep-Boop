@@ -1,8 +1,11 @@
 $(document).ready(function(){
+
+  intro();
   $('button').click(function(){
     var userInput = $('input').val();
 
     $('p').empty();
+
 
     if (isValid(userInput)) {
       var originArray = buildArray(userInput);
@@ -23,6 +26,11 @@ function isValid(userInput) {
   } else {
     return false;
   }
+}
+
+function intro() {
+  var intro = ["Hello, Dave.  Enter your access code now..."];
+  typeWriter("output", intro);
 }
 
 //buildArray() takes a userInput and builds an array of that length
